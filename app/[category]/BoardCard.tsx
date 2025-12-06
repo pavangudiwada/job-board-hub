@@ -106,7 +106,7 @@ export default function BoardCard({ board }: { board: Board }) {
                     </button>
 
                     <Link
-                        href={`${board.link}?ref=jobboardhub`}
+                        href={`${board.link}?ref=jobresources.fyi`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors"
