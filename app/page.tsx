@@ -1,3 +1,5 @@
+import { hubCategories } from "@/data/categories"
+
 export default function Home() {
   return (
     <div>
@@ -9,9 +11,12 @@ export default function Home() {
       <div className="flex">
         <aside className="w-64 p-8 border-r">
           <nav>
-            <a href="/devrel" className="block py-2">DevRel Jobs</a>
-            <a href="/opensource" className="block py-2">Open Source</a>
-            <a href="/techwriting" className="block py-2">Tech Writing</a>
+
+            {hubCategories.map(category => (
+              <a key={category.id} href={`/${category.id}`} className="block py-2">
+                {category.name}
+              </a>
+            ))}
           </nav>
         </aside>
 
