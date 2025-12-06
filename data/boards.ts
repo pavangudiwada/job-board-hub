@@ -196,13 +196,6 @@ export const boards: Board[] = [
         tags: ["developer-relations", "devops"]
     },
     {
-        name: "Jobmote",
-        description: "Remote job board",
-        link: "https://jobmote.com",
-        category: ["remote"],
-        tags: ["general"]
-    },
-    {
         name: "FlatWorld",
         description: "Remote jobs at global companies",
         link: "https://flatworld.co/jobs",
@@ -827,10 +820,10 @@ export const boards: Board[] = [
         tags: ["4-day-week", "work-life-balance", "flexible"]
     },
     {
-        name: "Workatastartup",
+        name: "Workatastartup(YC)",
         description: "Y Combinator's startup job board",
         link: "https://www.workatastartup.com/job_list",
-        category: ["remote", "popular"],
+        category: ["popular", "startup"],
         tags: ["yc", "startup", "early-stage"]
     },
 ];
