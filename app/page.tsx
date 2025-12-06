@@ -14,7 +14,7 @@ export default function Home() {
 
             {hubCategories.map(category => (
               <a key={category.id} href={`/${category.id}`} className="block py-2">
-                {category.name}
+                {category.name} Jobs
               </a>
             ))}
           </nav>
