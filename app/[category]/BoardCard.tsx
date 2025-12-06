@@ -89,7 +89,8 @@ export default function BoardCard({ board }: { board: Board }) {
                 <div className="mt-auto flex items-center gap-2">
                     <button
                         onClick={handleCopy}
-                        className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${copied
+                        title="Copy link"
+                        className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${copied
                             ? 'bg-green-100 text-green-700'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}

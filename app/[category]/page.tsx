@@ -18,7 +18,7 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                     <p className="text-sm">Everything you need to find your next job.</p>
                 </div>
                 <Link
-                    href="https://github.com/pavangudiwada/job-board-hub"
+                    href="https://github.com/pavangudiwada/jobresources"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-white text-slate-900 rounded-md hover:bg-gray-100 transition text-sm font-medium"
