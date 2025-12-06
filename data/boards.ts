@@ -109,7 +109,7 @@ export const boards: Board[] = [
         description: "Remote job board connecting women with flexible tech and startup jobs. Focuses on diversity and inclusion",
         link: "https://powertofly.com",
         category: ["remote"],
-        tags: ["diversity", "women-in-tech", "inclusive"]
+        tags: ["diversity", "women-in-tech", "inclusive", "startup"]
     },
     {
         name: "Virtual Vocations",
@@ -370,14 +370,14 @@ export const boards: Board[] = [
         name: "Wellfound",
         description: "Platform for finding jobs at 30,000+ startups. Apply to 130,000+ tech & startup jobs with one application. Shows salary and equity upfront",
         link: "https://wellfound.com",
-        category: ["remote", "popular"],
+        category: ["remote", "popular", "startup"],
         tags: ["startup", "equity", "salary-transparent"]
     },
     {
         name: "Y Combinator Jobs",
         description: "Official jobs board for top Y Combinator startups. Find remote, engineering, product, and startup opportunities",
         link: "https://ycombinator.com/jobs",
-        category: ["remote", "popular"],
+        category: ["remote", "popular", "startup"],
         tags: ["yc", "startup", "engineering"]
     },
     {
@@ -419,7 +419,7 @@ export const boards: Board[] = [
         name: "HNHIRING",
         description: "Index and search engine for all HackerNews 'Who is Hiring?' posts since 2018. 57,000+ job ads searchable",
         link: "https://hnhiring.com",
-        category: ["remote", "popular"],
+        category: ["remote", "popular", "startup"],
         tags: ["hackernews", "search", "index", "startup"]
     },
     {
