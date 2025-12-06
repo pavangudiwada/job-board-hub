@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import { Board } from "@/data/boards"
 import { useState } from "react"
 
@@ -23,12 +24,25 @@ export default function BoardCard({ board }: { board: Board }) {
     const visibleTags = board.tags?.slice(0, 3) || []
     const remainingTags = board.tags?.slice(3) || []
 
+    // Extract domain for favicon
+    const domain = new URL(board.link).hostname
+
     return (
         <div className="group relative bg-white border-2 border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
             <div className="p-5 flex flex-col h-full">
-                {/* Header with title */}
+                {/* Header with title and favicon */}
                 <div className="mb-3">
-                    <h3 className="text-lg font-bold text-gray-900 mb-1.5">{board.name}</h3>
+                    <div className="flex items-center gap-2 mb-1.5">
+                        <Image
+                            src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="flex-shrink-0"
+                            unoptimized
+                        />
+                        <h3 className="text-lg font-bold text-gray-900">{board.name}</h3>
+                    </div>
                     <p className="text-sm text-gray-600 leading-relaxed">{truncatedDescription}</p>
                 </div>
 
