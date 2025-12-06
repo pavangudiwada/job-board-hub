@@ -250,7 +250,7 @@ If you have questions about contributing, feel free to:
 
 ## Recognition
 
-All contributors will be recognized in our project. Thank you for helping make JobBoardHub better!
+All contributors will be recognized in our project. Thank you for helping make Job Resources better!
 
 ---
 

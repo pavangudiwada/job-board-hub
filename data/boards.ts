@@ -268,20 +268,6 @@ export const boards: Board[] = [
         tags: ["design", "ui", "ux"]
     },
     {
-        name: "Fossfox",
-        description: "Open source job opportunities",
-        link: "https://fossfox.com",
-        category: ["opensource"],
-        tags: ["foss", "open-source"]
-    },
-    {
-        name: "GitHub Jobs",
-        description: "Job board for software developers, engineers, and open source contributors. GitHub-integrated job postings",
-        link: "https://github.careers",
-        category: ["remote", "opensource"],
-        tags: ["github", "developer", "engineering"]
-    },
-    {
         name: "Open Collective",
         description: "Funding platform for open source projects. Fiscal sponsorship for 3,000+ projects. Transparent financial management",
         link: "https://opencollective.com/opensource",
@@ -467,7 +453,7 @@ export const boards: Board[] = [
     {
         name: "Designer Jobs",
         description: "Job board specifically for designers",
-        link: "https://designerjobs.co/jobs",
+        link: "https://designerjobs.co",
         category: ["design", "popular"],
         tags: ["design", "ui", "ux"]
     },

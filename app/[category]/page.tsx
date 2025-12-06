@@ -2,6 +2,7 @@ import { hubCategories } from "@/data/categories"
 import { getBoardsByCategory, Category } from "@/data/boards"
 import BoardCard from "./BoardCard"
 import Link from "next/link"
+import WelcomeBanner from "@/app/components/WelcomeBanner"
 
 export default async function JobBoards({ params }: { params: Promise<{ category: string }> }) {
     const { category } = await params as { category: Category }
@@ -10,6 +11,7 @@ export default async function JobBoards({ params }: { params: Promise<{ category
 
     return (
         <div className="flex flex-col h-screen">
+            <WelcomeBanner />
             <header className="sticky top-0 z-50 p-4 bg-slate-900 text-white flex items-center justify-between">
                 <div>
                     <h1 className="text-xl font-bold">Job Resources</h1>
