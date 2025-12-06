@@ -63,6 +63,16 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                             <BoardCard key={board.name} board={board} />
                         ))}
                     </div>
+
+                    {/* Floating "Missing a job board?" pill */}
+                    <Link
+                        href="https://github.com/pavangudiwada/job-board-hub/issues/new"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden md:flex fixed bottom-6 left-1/2 -translate-x-1/2 items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full shadow-lg hover:bg-slate-800 transition-all hover:shadow-xl text-sm font-medium z-40"
+                    >
+                        Missing a job board? <span className="font-semibold">Add it</span>
+                    </Link>
                 </main>
 
             </div>
