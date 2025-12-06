@@ -287,8 +287,8 @@ export const boards: Board[] = [
         name: "GitJobs",
         description: "Job board for open source and Git-based projects",
         link: "https://gitjobs.dev",
-        category: ["opensource", "devops"],
-        tags: ["git", "version-control"]
+        category: ["opensource", "development", "devops"],
+        tags: ["git", "version-control", "developer", "cncf"]
     },
     {
         name: "DevOps Freelancer",
@@ -331,8 +331,8 @@ export const boards: Board[] = [
         name: "CryptoJobs DevRel",
         description: "Specialized job board for developer relations roles at blockchain/crypto startups. DevRel, Dev Advocate positions",
         link: "https://cryptocurrencyjobs.co/developer-relations",
-        category: ["devrel"],
-        tags: ["blockchain", "crypto", "advocacy"]
+        category: ["devrel", "crypto"],
+        tags: ["blockchain", "crypto", "advocacy", "startup"]
     },
 
     // Tech Writing
@@ -477,15 +477,15 @@ export const boards: Board[] = [
         name: "Arc.dev",
         description: "Curated marketplace for vetted remote developers. Requires vetting (communication + technical tests). Covers 60+ specialties",
         link: "https://arc.dev",
-        category: ["remote", "popular", "devops"],
-        tags: ["vetted", "marketplace", "freelance"]
+        category: ["remote", "popular", "development"],
+        tags: ["vetted", "marketplace", "freelance", "developer"]
     },
     {
         name: "Toptal",
         description: "Elite network for top 3% of freelancers. Rigorous screening process. High-quality, vetted clients and developers",
         link: "https://toptal.com",
-        category: ["remote", "popular", "devops"],
-        tags: ["elite", "freelance", "vetted", "top-tier"]
+        category: ["remote", "popular", "development"],
+        tags: ["elite", "freelance", "vetted", "top-tier", "developer"]
     },
     {
         name: "Upwork",
@@ -679,57 +679,57 @@ export const boards: Board[] = [
         name: "AI Jobs",
         description: "Find a job at a cutting-edge AI company",
         link: "https://www.moaijobs.com",
-        category: ["remote", "devops"],
-        tags: ["ai", "machine-learning", "data", "startup"]
+        category: ["remote", "aiml"],
+        tags: ["ai", "machine-learning", "data", "startup", "ml"]
     },
     {
         name: "AI/ML Jobs",
         description: "Jobs at Top AI Companies and Startups, Updated Daily",
         link: "https://aimljobs.fyi",
-        category: ["remote", "devops"],
-        tags: ["ai", "ml", "machine-learning", "startup"]
+        category: ["remote", "aiml"],
+        tags: ["ai", "ml", "machine-learning", "startup", "data-science"]
     },
     {
         name: "DataJobs",
         description: "Job board for data professionals",
         link: "https://datajobs.com",
-        category: ["remote", "devops"],
-        tags: ["data", "analytics", "data-science"]
+        category: ["remote", "aiml"],
+        tags: ["data", "analytics", "data-science", "ml"]
     },
     {
         name: "iCrunchData",
         description: "Data science and analytics jobs",
         link: "https://icrunchdata.com",
-        category: ["remote", "devops"],
-        tags: ["data-science", "analytics", "data"]
+        category: ["remote", "aiml"],
+        tags: ["data-science", "analytics", "data", "ml"]
     },
     {
         name: "DataScienceJobs",
         description: "Discover the latest and greatest data science jobs",
         link: "https://datasciencejobs.com",
-        category: ["remote", "devops"],
-        tags: ["data-science", "analytics", "ml"]
+        category: ["remote", "aiml"],
+        tags: ["data-science", "analytics", "ml", "ai"]
     },
     {
         name: "CryptoJobs List",
         description: "Crypto and blockchain job board",
         link: "https://cryptojobslist.com",
-        category: ["remote", "devops"],
-        tags: ["blockchain", "crypto", "web3", "startup"]
+        category: ["remote", "crypto"],
+        tags: ["blockchain", "crypto", "web3", "startup", "solidity"]
     },
     {
         name: "Web3 Jobs",
         description: "Web3 career opportunities",
         link: "https://web3.career",
-        category: ["remote", "devops"],
-        tags: ["web3", "blockchain", "crypto", "startup"]
+        category: ["remote", "crypto"],
+        tags: ["web3", "blockchain", "crypto", "startup", "solidity"]
     },
     {
         name: "Crypto.jobs",
         description: "Cryptocurrency job board",
         link: "https://crypto.jobs",
-        category: ["remote", "devops"],
-        tags: ["crypto", "blockchain", "startup"]
+        category: ["remote", "crypto"],
+        tags: ["crypto", "blockchain", "startup", "web3"]
     },
 
     // InfoSec

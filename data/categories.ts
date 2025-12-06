@@ -8,4 +8,6 @@ export const hubCategories = [
     { id: 'devrel', name: 'DevRel', description: 'Developer Relations positions' },
     { id: 'techwriting', name: 'Tech Writing', description: 'Technical writing opportunities' },
     { id: 'startup', name: 'Startup', description: 'Jobs at startups' },
+    { id: 'aiml', name: 'AI/ML', description: 'Artificial Intelligence and Machine Learning jobs' },
+    { id: 'crypto', name: 'Crypto/Web3', description: 'Blockchain, crypto, and Web3 opportunities' },
 ] 
