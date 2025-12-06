@@ -1,6 +1,6 @@
-# Contributing to JobBoardHub
+# Contributing to Job Resources
 
-Thank you for your interest in contributing to JobBoardHub! We welcome contributions from the community to help make this the best resource for finding specialized job boards.
+Thank you for your interest in contributing to Job Resources! We welcome contributions from the community to help make this the best resource for finding specialized job boards.
 
 ## Table of Contents
 
@@ -91,7 +91,7 @@ We welcome feature suggestions! Please create an issue with:
 2. **Clone your fork**:
    ```bash
    git clone https://github.com/YOUR_USERNAME/job-board-hub.git
-   cd job-board-hub/jobboardhub
+   cd job-board-hub/jobresources
    ```
 
 3. **Install dependencies**:
@@ -131,7 +131,7 @@ npm run lint
 ## Project Structure
 
 ```
-jobboardhub/
+jobresources/
 ├── app/                    # Next.js app directory
 │   ├── [category]/        # Dynamic category pages
 │   │   ├── page.tsx       # Category page component

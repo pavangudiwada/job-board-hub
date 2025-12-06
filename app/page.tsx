@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <header className="p-4 bg-slate-900 text-white flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold">Job Board Hub</h1>
+          <h1 className="text-xl font-bold">Job Resources</h1>
           <p className="text-sm">One stop for all your Job Hunting!</p>
         </div>
         <Link

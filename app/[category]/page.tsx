@@ -12,8 +12,8 @@ export default async function JobBoards({ params }: { params: Promise<{ category
         <div className="flex flex-col h-screen">
             <header className="sticky top-0 z-50 p-4 bg-slate-900 text-white flex items-center justify-between">
                 <div>
-                    <h1 className="text-xl font-bold">JobBoardHub</h1>
-                    <p className="text-sm">Find specialized job boards</p>
+                    <h1 className="text-xl font-bold">Job Resources</h1>
+                    <p className="text-sm">Everything you need to find your next job.</p>
                 </div>
                 <Link
                     href="https://github.com/pavangudiwada/job-board-hub"
