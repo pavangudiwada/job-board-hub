@@ -9,8 +9,8 @@ export default async function JobBoards({ params }: { params: Promise<{ category
     const currentCategory = hubCategories.find(cat => cat.id === category)
 
     return (
-        <div>
-            <header className="p-4 bg-slate-900 text-white flex items-center justify-between">
+        <div className="flex flex-col h-screen">
+            <header className="sticky top-0 z-50 p-4 bg-slate-900 text-white flex items-center justify-between">
                 <div>
                     <h1 className="text-xl font-bold">JobBoardHub</h1>
                     <p className="text-sm">Find specialized job boards</p>
@@ -28,8 +28,8 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                 </Link>
             </header>
 
-            <div className="flex">
-                <aside className="w-48 p-4 border-r">
+            <div className="flex flex-1 overflow-hidden">
+                <aside className="sticky top-0 w-48 h-[calc(100vh-72px)] overflow-y-auto p-4 border-r bg-slate-900">
                     <nav>
 
                         {hubCategories.map(cat => (
@@ -46,10 +46,10 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                         ))}
                     </nav>
                 </aside>
-                <main className="flex-1 p-6">
+                <main className="flex-1 p-6 overflow-y-auto">
                     <h2 className="text-2xl font-bold mb-4">{currentCategory?.name || category} Job Boards</h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {getBoardsByCategory(category).map(board => (
                             <BoardCard key={board.name} board={board} />
                         ))}

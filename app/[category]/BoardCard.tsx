@@ -6,76 +6,99 @@ import { useState } from "react"
 
 export default function BoardCard({ board }: { board: Board }) {
     const [copied, setCopied] = useState(false)
+    const [showAllTags, setShowAllTags] = useState(false)
 
     const handleCopy = (e: React.MouseEvent) => {
         e.preventDefault()
+        e.stopPropagation()
         navigator.clipboard.writeText(board.link)
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
     }
 
-    const truncatedDescription = board.description.length > 120
-        ? board.description.substring(0, 120) + '...'
+    const truncatedDescription = board.description.length > 80
+        ? board.description.substring(0, 80) + '...'
         : board.description
 
-    return (
-        <div className="group relative p-5 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-3">
-                    <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2 text-gray-900">{board.name}</h3>
-                        <p className="text-sm text-gray-600 mb-3">{truncatedDescription}</p>
-                    </div>
+    const visibleTags = board.tags?.slice(0, 3) || []
+    const remainingTags = board.tags?.slice(3) || []
 
-                    <div className="flex gap-2 ml-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button
-                            onClick={handleCopy}
-                            title={copied ? "Copied!" : "Copy link"}
-                            className={`p-2 rounded-full transition cursor-pointer ${copied ? 'bg-green-100' : 'hover:bg-gray-100'}`}
-                        >
-                            {copied ? (
-                                <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                            ) : (
-                                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
+    return (
+        <div className="group relative bg-white border-2 border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
+            <div className="p-5 flex flex-col h-full">
+                {/* Header with title */}
+                <div className="mb-3">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1.5">{board.name}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{truncatedDescription}</p>
                 </div>
 
-                {/* Metadata badges */}
+                {/* Tags */}
                 {board.tags && board.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mb-4">
-                        {board.tags.slice(0, 5).map((tag, index) => (
+                        {visibleTags.map((tag, index) => (
                             <span
                                 key={index}
-                                className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-md"
+                                className="px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
                             >
                                 {tag}
                             </span>
                         ))}
-                        {board.tags.length > 5 && (
-                            <span className="px-2 py-1 text-xs font-medium text-gray-500">
-                                +{board.tags.length - 5}
-                            </span>
+                        {remainingTags.length > 0 && (
+                            <div className="relative">
+                                <span
+                                    className="px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:bg-gray-200"
+                                    onMouseEnter={() => setShowAllTags(true)}
+                                    onMouseLeave={() => setShowAllTags(false)}
+                                >
+                                    +{remainingTags.length}
+                                </span>
+                                {showAllTags && (
+                                    <div className="absolute z-10 bottom-full mb-2 left-0 bg-white border-2 border-gray-200 rounded-lg shadow-lg p-2 min-w-max">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {remainingTags.map((tag, index) => (
+                                                <span
+                                                    key={index}
+                                                    className="px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         )}
                     </div>
                 )}
 
-                {/* Visit Board button */}
-                <div className="mt-auto">
+                {/* Copy button and explore button in same row */}
+                <div className="mt-auto flex items-center gap-2">
+                    <button
+                        onClick={handleCopy}
+                        className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${copied
+                            ? 'bg-green-100 text-green-700'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                            }`}
+                    >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {copied ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            ) : (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            )}
+                        </svg>
+                        {copied ? 'Copied!' : 'Copy'}
+                    </button>
+
                     <Link
                         href={`${board.link}?ref=jobboardhub`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+                        className="flex-1 flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors"
                     >
-                        Visit Board
-                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        Explore Board
+                        <svg className="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </Link>
                 </div>

@@ -149,7 +149,7 @@ export const boards: Board[] = [
     {
         name: "Pangian",
         description: "Remote jobs with travel opportunities",
-        link: "https://pangian.com/job-travel-remote",
+        link: "https://pangian.com/remote/",
         category: ["remote"],
         tags: ["travel", "digital-nomad"]
     },
@@ -271,7 +271,7 @@ export const boards: Board[] = [
         name: "Open Source Design Jobs",
         description: "Design roles in open source projects",
         link: "https://opensourcedesign.net/jobs",
-        category: ["opensource"],
+        category: ["opensource", "design"],
         tags: ["design", "ui", "ux"]
     },
     {
@@ -433,7 +433,7 @@ export const boards: Board[] = [
         name: "HackerNews Who is Hiring",
         description: "Monthly 'Who is Hiring' thread on HN with direct job postings from companies and startups. Real-time opportunities",
         link: "https://news.ycombinator.com/jobs",
-        category: ["remote", "popular"],
+        category: ["remote", "popular", "startup"],
         tags: ["startup", "real-time", "community"]
     },
     {
@@ -454,42 +454,42 @@ export const boards: Board[] = [
         name: "Dribbble",
         description: "#1 job board for remote graphic design jobs. Largest independent community for designers and creative professionals",
         link: "https://dribbble.com/remote-design-jobs",
-        category: ["remote", "popular"],
+        category: ["design", "popular"],
         tags: ["design", "graphic-design", "creative", "ui", "ux"]
     },
     {
         name: "Authentic Jobs",
         description: "Job board for designers, developers, and creative professionals",
         link: "https://authenticjobs.com",
-        category: ["remote", "popular"],
+        category: ["design", "development", "popular"],
         tags: ["design", "developer", "creative"]
     },
     {
         name: "Behance",
         description: "Adobe's creative job board",
         link: "https://www.behance.net/joblist",
-        category: ["remote", "popular"],
+        category: ["design", "popular"],
         tags: ["design", "creative", "adobe", "ui", "ux"]
     },
     {
         name: "Designer Jobs",
         description: "Job board specifically for designers",
         link: "https://designerjobs.co/jobs",
-        category: ["remote", "popular"],
+        category: ["design", "popular"],
         tags: ["design", "ui", "ux"]
     },
     {
         name: "UI & UX Designer Jobs",
         description: "Hand-picked UI, UX & UXR Jobs",
         link: "https://uiuxdesignerjobs.com",
-        category: ["remote", "popular"],
+        category: ["design", "popular"],
         tags: ["ui", "ux", "research", "hand-picked"]
     },
     {
         name: "UX Jobs Board",
         description: "User experience design job board",
         link: "https://www.uxjobsboard.com",
-        category: ["remote", "popular"],
+        category: ["design", "popular"],
         tags: ["ux", "user-experience", "design"]
     },
 
@@ -563,91 +563,91 @@ export const boards: Board[] = [
         name: "Ruby on Rails Jobs",
         description: "Job board for Ruby on Rails developers",
         link: "https://www.ruby-on-rails-jobs.com",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["ruby", "rails", "backend"]
     },
     {
         name: "React Job Board",
         description: "Jobs for React developers",
         link: "https://www.reactjobboard.com",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["react", "frontend", "javascript"]
     },
     {
         name: "Vue Jobs",
         description: "Job board for Vue.js developers",
         link: "https://vuejobs.com",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["vue", "vuejs", "frontend", "javascript"]
     },
     {
         name: "Angular Jobs",
         description: "Job board for Angular developers",
         link: "https://angularjobs.com",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["angular", "frontend", "javascript"]
     },
     {
         name: "Python Job Board",
         description: "Official Python.org job board",
         link: "https://www.python.org/jobs",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["python", "backend", "data"]
     },
     {
         name: "Django Jobs",
         description: "Job board for Django developers",
         link: "https://djangojobs.net/jobs",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["django", "python", "backend"]
     },
     {
         name: "Golang Cafe",
         description: "Job board for Go developers",
         link: "https://golang.cafe",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["golang", "go", "backend"]
     },
     {
         name: "Rust Jobs",
         description: "Rust Programming Language Jobs",
         link: "http://rust-jobs.com",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["rust", "systems", "backend"]
     },
     {
         name: "iOS Dev Jobs",
         description: "Job board for iOS developers",
         link: "https://iosdevjobs.com",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["ios", "mobile", "swift"]
     },
     {
         name: "Android Dev Careers",
         description: "Job board for Android developers",
         link: "https://androiddev.careers",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["android", "mobile", "kotlin"]
     },
     {
         name: "React Native Jobs",
         description: "The #1 job board for React Native developers",
         link: "https://reactnative-jobs.com",
-        category: ["remote", "popular"],
+        category: ["development", "popular"],
         tags: ["react-native", "mobile", "javascript"]
     },
     {
         name: "LaraJobs",
         description: "Job board for Laravel developers",
         link: "https://larajobs.com",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["laravel", "php", "backend"]
     },
     {
         name: "Elixir Jobs",
         description: "Job board for Elixir developers",
         link: "https://elixirjobs.net",
-        category: ["remote", "devops"],
+        category: ["development"],
         tags: ["elixir", "functional", "backend"]
     },
 
