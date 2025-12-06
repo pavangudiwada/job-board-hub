@@ -4,6 +4,7 @@ import BoardCard from "./BoardCard"
 import Link from "next/link"
 import WelcomeBanner from "@/app/components/WelcomeBanner"
 import MobileMenu from "@/app/components/MobileMenu"
+import { Analytics } from "@vercel/analytics/next"
 
 export default async function JobBoards({ params }: { params: Promise<{ category: string }> }) {
     const { category } = await params as { category: Category }
@@ -74,7 +75,7 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                         Missing a job board? <span className="font-semibold">Add it</span>
                     </Link>
                 </main>
-
+                <Analytics />
             </div>
         </div >
 

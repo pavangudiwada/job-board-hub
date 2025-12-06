@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Category } from '@/data/categories'
 
 interface MobileMenuProps {
     categories: Array<{ id: string; name: string; description: string }>
@@ -42,8 +41,8 @@ export default function MobileMenu({ categories, currentCategory }: MobileMenuPr
                                     key={cat.id}
                                     href={`/${cat.id}`}
                                     className={`block py-3 px-4 rounded-lg transition ${cat.id === currentCategory
-                                            ? 'bg-blue-100 text-blue-700 font-medium'
-                                            : 'text-gray-700 hover:bg-gray-100'
+                                        ? 'bg-blue-100 text-blue-700 font-medium'
+                                        : 'text-gray-700 hover:bg-gray-100'
                                         }`}
                                     onClick={() => setIsOpen(false)}
                                 >
