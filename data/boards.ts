@@ -1,4 +1,3 @@
-// export type Category = "remote" | "opensource" | "devops" | "devrel" | "techwriting" | "popular" | "startup";
 
 import { hubCategories } from "./categories";
 
@@ -10,543 +9,830 @@ export type Board = {
     description: string;
     link: string;
     category: Category[];
+    tags?: string[];
 };
 
 export const boards: Board[] = [
-    // Remote Jobs
     {
         name: "We Work Remotely",
         description: "The largest remote work community in the world",
         link: "https://weworkremotely.com",
         category: ["remote", "popular"],
+        tags: ["full-time", "contract", "freelance"]
     },
     {
         name: "Remote OK",
         description: "Find remote jobs for digital nomads and remote workers",
         link: "https://remoteok.com",
         category: ["remote", "popular"],
+        tags: ["digital-nomad", "full-time", "contract"]
     },
     {
         name: "FlexJobs",
         description: "Hand-screened remote and flexible jobs",
         link: "https://www.flexjobs.com",
         category: ["remote", "popular"],
+        tags: ["flexible", "part-time", "full-time"]
     },
     {
         name: "Remotive",
         description: "Remote tech jobs and resources for remote workers",
         link: "https://remotive.com",
         category: ["remote"],
+        tags: ["tech", "engineering", "design"]
     },
     {
         name: "JustRemote",
         description: "Remote jobs in tech, marketing, and design",
         link: "https://justremote.co",
         category: ["remote"],
+        tags: ["tech", "marketing", "design"]
     },
     {
         name: "Himalayas",
         description: "Find remote jobs at top remote companies",
         link: "https://himalayas.app",
-        category: ["remote"],
+        category: ["remote", "popular"],
+        tags: ["curated", "tech", "startup"]
     },
     {
         name: "Working Nomads",
         description: "Remote jobs for digital workers",
         link: "https://www.workingnomads.com/jobs",
         category: ["remote"],
+        tags: ["digital-nomad", "freelance", "contract"]
+    },
+    {
+        name: "Remote.co",
+        description: "Remote-only jobs (telecommute excluded) founded by Sara Sutton. Browse by role or tags like high-paying, entry-level, international",
+        link: "https://remote.co",
+        category: ["remote", "popular"],
+        tags: ["high-paying", "entry-level", "international"]
+    },
+    {
+        name: "DailyRemote",
+        description: "Daily updated remote job listings across multiple categories",
+        link: "https://dailyremote.com",
+        category: ["remote"],
+        tags: ["daily-updated", "curated"]
+    },
+    {
+        name: "Jobspresso",
+        description: "Hand-picked remote jobs across multiple industries with 1,000+ listings. Post a resume feature for employers to find you",
+        link: "https://jobspresso.co",
+        category: ["remote"],
+        tags: ["curated", "hand-picked", "resume"]
+    },
+    {
+        name: "Skip the Drive",
+        description: "Remote job board aggregating work-from-home opportunities across multiple industries and job types",
+        link: "https://skipthedrive.com",
+        category: ["remote"],
+        tags: ["work-from-home", "aggregator"]
+    },
+    {
+        name: "RemoteYeah",
+        description: "Remote job board with focus on tech roles including DevOps and SRE positions. Curated listings from reputable companies",
+        link: "https://remoteyeah.com",
+        category: ["remote"],
+        tags: ["tech", "curated"]
+    },
+    {
+        name: "NoDesk",
+        description: "Remote work toolkit and job board with 100,000+ talented candidates. Guides and best practices for remote work",
+        link: "https://nodesk.co",
+        category: ["remote"],
+        tags: ["toolkit", "guides", "resources"]
+    },
+    {
+        name: "Power to Fly",
+        description: "Remote job board connecting women with flexible tech and startup jobs. Focuses on diversity and inclusion",
+        link: "https://powertofly.com",
+        category: ["remote"],
+        tags: ["diversity", "women-in-tech", "inclusive"]
+    },
+    {
+        name: "Virtual Vocations",
+        description: "Remote job board with focus on legitimate work-from-home opportunities across various industries",
+        link: "https://virtualvocations.com",
+        category: ["remote"],
+        tags: ["work-from-home", "verified", "legitimate"]
+    },
+    {
+        name: "Outsourcely",
+        description: "Remote job board dedicated to outsourcing. Companies hiring worldwide. Browse or create profile for employers to find you",
+        link: "https://outsourcely.com",
+        category: ["remote"],
+        tags: ["outsourcing", "worldwide", "profile"]
+    },
+    {
+        name: "Workaline",
+        description: "Remote job board for tech professionals",
+        link: "https://workaline.com",
+        category: ["remote"],
+        tags: ["tech", "professional"]
+    },
+    {
+        name: "Remote4Me",
+        description: "Curated remote job opportunities",
+        link: "https://remote4me.com",
+        category: ["remote"],
+        tags: ["curated"]
+    },
+    {
+        name: "Workew",
+        description: "Remote jobs worldwide",
+        link: "https://workew.com/remote-jobs",
+        category: ["remote"],
+        tags: ["worldwide"]
+    },
+    {
+        name: "Pangian",
+        description: "Remote jobs with travel opportunities",
+        link: "https://pangian.com/job-travel-remote",
+        category: ["remote"],
+        tags: ["travel", "digital-nomad"]
+    },
+    {
+        name: "DynamiteJobs",
+        description: "Remote executive assistant and operations roles",
+        link: "https://www.dynamitejobs.com",
+        category: ["remote"],
+        tags: ["executive", "operations", "assistant"]
+    },
+    {
+        name: "Remote Index",
+        description: "Index of remote job opportunities",
+        link: "https://remoteindex.co",
+        category: ["remote"],
+        tags: ["index", "directory"]
+    },
+    {
+        name: "Devremote",
+        description: "Remote developer jobs",
+        link: "https://devremote.io",
+        category: ["remote"],
+        tags: ["developer", "engineering"]
+    },
+    {
+        name: "Remoters",
+        description: "Remote job opportunities for professionals",
+        link: "https://remoters.net/jobs",
+        category: ["remote"],
+        tags: ["professional"]
+    },
+    {
+        name: "Remotify",
+        description: "Remote job listings",
+        link: "https://remotify.me",
+        category: ["remote"],
+        tags: ["curated"]
+    },
+    {
+        name: "Remote Rocketship",
+        description: "Search 1000+ remote jobs by role (DevRel, DevOps, etc). Focused on genuinely remote companies. Developer relations positions",
+        link: "https://remoterocketship.com",
+        category: ["remote", "devrel"],
+        tags: ["developer-relations", "devops"]
+    },
+    {
+        name: "Jobmote",
+        description: "Remote job board",
+        link: "https://jobmote.com",
+        category: ["remote"],
+        tags: ["general"]
+    },
+    {
+        name: "FlatWorld",
+        description: "Remote jobs at global companies",
+        link: "https://flatworld.co/jobs",
+        category: ["remote"],
+        tags: ["global", "international"]
+    },
+    {
+        name: "Meerkad",
+        description: "Remote jobs for developers",
+        link: "https://meerkad.com",
+        category: ["remote"],
+        tags: ["developer", "engineering"]
+    },
+    {
+        name: "Remote Developer Jobs",
+        description: "Jobs for remote software developers",
+        link: "https://www.remote-developer-jobs.com",
+        category: ["remote"],
+        tags: ["developer", "software", "engineering"]
+    },
+    {
+        name: "I Love Remote",
+        description: "High paid remote jobs",
+        link: "https://iloveremote.io",
+        category: ["remote"],
+        tags: ["high-paying", "premium"]
+    },
+    {
+        name: "Euro Top Tech Jobs",
+        description: "High-Paying ($100-600k) Fully-Remote Tech Jobs in Europe",
+        link: "https://eurotoptechjobs.com",
+        category: ["remote"],
+        tags: ["high-paying", "europe", "premium", "senior"]
+    },
+    {
+        name: "Remote100K",
+        description: "Remote jobs paying $100k+",
+        link: "https://remote100k.com",
+        category: ["remote"],
+        tags: ["high-paying", "senior", "100k+"]
+    },
+    {
+        name: "Wellpaid.io",
+        description: "High-paying remote tech jobs",
+        link: "https://wellpaid.io",
+        category: ["remote"],
+        tags: ["high-paying", "tech", "premium"]
+    },
+    {
+        name: "RemoteScout",
+        description: "Remote job search platform",
+        link: "https://remotescout24.com/en",
+        category: ["remote"],
+        tags: ["search", "platform"]
     },
 
-    // Open Source Jobs
+    // Open Source
     {
         name: "FOSS Jobs",
         description: "Free and Open Source Software job opportunities",
         link: "https://www.fossjobs.net",
         category: ["opensource"],
+        tags: ["foss", "open-source"]
     },
     {
         name: "Open Source Design Jobs",
         description: "Design roles in open source projects",
         link: "https://opensourcedesign.net/jobs",
         category: ["opensource"],
+        tags: ["design", "ui", "ux"]
+    },
+    {
+        name: "Fossfox",
+        description: "Open source job opportunities",
+        link: "https://fossfox.com",
+        category: ["opensource"],
+        tags: ["foss", "open-source"]
+    },
+    {
+        name: "GitHub Jobs",
+        description: "Job board for software developers, engineers, and open source contributors. GitHub-integrated job postings",
+        link: "https://github.careers",
+        category: ["remote", "opensource"],
+        tags: ["github", "developer", "engineering"]
+    },
+    {
+        name: "Open Collective",
+        description: "Funding platform for open source projects. Fiscal sponsorship for 3,000+ projects. Transparent financial management",
+        link: "https://opencollective.com/opensource",
+        category: ["opensource"],
+        tags: ["funding", "sponsorship", "fiscal"]
+    },
+
+    // DevOps
+    {
+        name: "Kube Careers",
+        description: "Kubernetes and cloud-native job board",
+        link: "https://kube.careers",
+        category: ["devops", "popular"],
+        tags: ["kubernetes", "cloud-native", "k8s"]
     },
     {
         name: "GitJobs",
         description: "Job board for open source and Git-based projects",
         link: "https://gitjobs.dev",
         category: ["opensource", "devops"],
+        tags: ["git", "version-control"]
     },
     {
-        name: "Open Source Pledge Jobs",
-        description: "Job board for companies supporting open source",
-        link: "https://opensourcepledge.com/jobs/",
-        category: ["opensource"],
+        name: "DevOps Freelancer",
+        description: "Dedicated platform for DevOps, SRE, and DevSecOps experts to find niche-specific projects",
+        link: "https://devopsfreelancer.com",
+        category: ["devops"],
+        tags: ["sre", "devsecops", "freelance"]
     },
-
-    // DevOps Jobs
     {
-        name: "Kube Careers",
-        description: "Kubernetes and cloud-native job board",
-        link: "https://kube.careers",
-        category: ["devops", "popular"],
+        name: "CodementorX",
+        description: "Platform for freelancers who can mentor or consult on DevOps practices, SRE, or DevSecOps strategies",
+        link: "https://codementor.io",
+        category: ["devops"],
+        tags: ["mentoring", "consulting", "sre"]
+    },
+    {
+        name: "CNCF Job Board",
+        description: "Cloud Native Computing Foundation job board",
+        link: "https://jobs.cncf.io",
+        category: ["devops"],
+        tags: ["cloud-native", "cncf", "kubernetes"]
     },
 
-    // DevRel Jobs
+    // DevRel
     {
         name: "Developer Avocados",
         description: "Developer advocacy job board and community",
         link: "https://developeravocados.net",
         category: ["devrel"],
+        tags: ["advocacy", "community"]
     },
     {
         name: "DevRel Careers",
         description: "Developer Relations and advocacy positions",
         link: "https://devrelcareers.com",
         category: ["devrel"],
+        tags: ["advocacy", "community", "relations"]
+    },
+    {
+        name: "CryptoJobs DevRel",
+        description: "Specialized job board for developer relations roles at blockchain/crypto startups. DevRel, Dev Advocate positions",
+        link: "https://cryptocurrencyjobs.co/developer-relations",
+        category: ["devrel"],
+        tags: ["blockchain", "crypto", "advocacy"]
     },
 
-    // Tech Writing Jobs
+    // Tech Writing
     {
         name: "Write the Docs Job Board",
         description: "Documentation and technical writing opportunities",
         link: "https://jobs.writethedocs.org",
         category: ["techwriting", "popular"],
+        tags: ["documentation", "docs", "writing"]
     },
     {
         name: "ProBlogger Job Board",
         description: "Writing and blogging job opportunities",
         link: "https://problogger.com/jobs",
         category: ["techwriting"],
+        tags: ["blogging", "content", "writing"]
+    },
+    {
+        name: "WriterAccess",
+        description: "Tiered system for categorizing writers' expertise. Content planning tools for technical writing projects",
+        link: "https://writeraccess.com",
+        category: ["techwriting"],
+        tags: ["content", "technical", "planning"]
+    },
+    {
+        name: "WriterHire",
+        description: "Platform for hiring skilled technical writers for documentation and complex technical information",
+        link: "https://writerhire.com",
+        category: ["techwriting"],
+        tags: ["documentation", "technical", "complex"]
     },
 
+    // Popular/General
     {
-        "name": "We Work Remotely",
-        "description": "The largest remote work community in the world with 6M+ visitors. Strong for software development, marketing, design, and customer support roles",
-        "link": "https://weworkremotely.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Wellfound",
+        description: "Platform for finding jobs at 30,000+ startups. Apply to 130,000+ tech & startup jobs with one application. Shows salary and equity upfront",
+        link: "https://wellfound.com",
+        category: ["remote", "popular"],
+        tags: ["startup", "equity", "salary-transparent"]
     },
     {
-        "name": "FlexJobs",
-        "description": "The most comprehensive remote job board with hand-screened legitimate job postings across industries. Subscription-based service",
-        "link": "https://flexjobs.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Y Combinator Jobs",
+        description: "Official jobs board for top Y Combinator startups. Find remote, engineering, product, and startup opportunities",
+        link: "https://ycombinator.com/jobs",
+        category: ["remote", "popular"],
+        tags: ["yc", "startup", "engineering"]
     },
     {
-        "name": "Remote.co",
-        "description": "Remote-only jobs (telecommute excluded) founded by Sara Sutton. Browse by role or tags like high-paying, entry-level, international",
-        "link": "https://remote.co",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "LinkedIn Jobs",
+        description: "Professional networking job board with 91,000+ remote tech jobs worldwide. Advanced filtering by role, location, and company",
+        link: "https://linkedin.com/jobs",
+        category: ["remote", "popular"],
+        tags: ["professional", "networking", "enterprise"]
     },
     {
-        "name": "RemoteOK",
-        "description": "Remote job board with best search filters by location, salary, and employer benefits. Primarily software engineering focused",
-        "link": "https://remoteok.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Indeed",
+        description: "Large general job board with remote job filter. Good for finding technical writing, support, and various tech roles",
+        link: "https://indeed.com",
+        category: ["remote", "popular"],
+        tags: ["general", "aggregator", "large"]
     },
     {
-        "name": "JustRemote",
-        "description": "Minimalistic remote-only job board. Filter by job origin, type (full-time/contract/freelance), or role. Weekly subscription newsletter available",
-        "link": "https://justremote.co",
-        "category": [
-            "remote"
-        ]
+        name: "Glassdoor",
+        description: "Job search with company reviews and salary information",
+        link: "https://www.glassdoor.com",
+        category: ["remote", "popular"],
+        tags: ["reviews", "salary-info", "transparency"]
     },
     {
-        "name": "Wellfound",
-        "description": "Platform for finding jobs at 30,000+ startups. Apply to 130,000+ tech & startup jobs with one application. Shows salary and equity upfront",
-        "link": "https://wellfound.com",
-        "category": [
-            "remote",
-            "popular",
-            "startup"
-        ]
+        name: "Stack Overflow Jobs",
+        description: "Job board for software developers and engineers. Remote positions across different tech stacks and experience levels",
+        link: "https://stackoverflow.com/jobs",
+        category: ["remote", "popular"],
+        tags: ["developer", "engineering", "tech-stack"]
     },
     {
-        "name": "Angel List",
-        "description": "Y Combinator-backed startup job platform. Access 130,000+ tech & startup jobs privately. See salary and equity information upfront",
-        "link": "https://angellist.com/careers",
-        "category": [
-            "remote",
-            "popular",
-            "startup"
-        ]
+        name: "HackerNews Who is Hiring",
+        description: "Monthly 'Who is Hiring' thread on HN with direct job postings from companies and startups. Real-time opportunities",
+        link: "https://news.ycombinator.com/jobs",
+        category: ["remote", "popular"],
+        tags: ["startup", "real-time", "community"]
     },
     {
-        "name": "Y Combinator Jobs",
-        "description": "Official jobs board for top Y Combinator startups. Find remote, engineering, product, and startup opportunities",
-        "link": "https://ycombinator.com/jobs",
-        "category": [
-            "remote",
-            "popular",
-            "startup"
-        ]
+        name: "HNHIRING",
+        description: "Index and search engine for all HackerNews 'Who is Hiring?' posts since 2018. 57,000+ job ads searchable",
+        link: "https://hnhiring.com",
+        category: ["remote", "popular"],
+        tags: ["hackernews", "search", "index", "startup"]
     },
     {
-        "name": "Arc.dev",
-        "description": "Curated marketplace for vetted remote developers. Requires vetting (communication + technical tests). Covers 60+ specialties",
-        "link": "https://arc.dev",
-        "category": [
-            "remote",
-            "popular",
-            "devops"
-        ]
+        name: "The Muse",
+        description: "Job board with detailed company profiles. Remote filter available. Strong company culture and benefits information",
+        link: "https://themuse.com",
+        category: ["remote"],
+        tags: ["company-culture", "benefits", "profiles"]
     },
     {
-        "name": "Toptal",
-        "description": "Elite network for top 3% of freelancers. Rigorous screening process. High-quality, vetted clients and developers",
-        "link": "https://toptal.com",
-        "category": [
-            "remote",
-            "popular",
-            "devops"
-        ]
+        name: "Dribbble",
+        description: "#1 job board for remote graphic design jobs. Largest independent community for designers and creative professionals",
+        link: "https://dribbble.com/remote-design-jobs",
+        category: ["remote", "popular"],
+        tags: ["design", "graphic-design", "creative", "ui", "ux"]
     },
     {
-        "name": "Braintrust",
-        "description": "Blockchain-based freelance marketplace owned by users. Free job board for remote tech talent. Covers DevOps, cloud, and technical roles",
-        "link": "https://usebraintrust.com",
-        "category": [
-            "remote",
-            "devops"
-        ]
+        name: "Authentic Jobs",
+        description: "Job board for designers, developers, and creative professionals",
+        link: "https://authenticjobs.com",
+        category: ["remote", "popular"],
+        tags: ["design", "developer", "creative"]
     },
     {
-        "name": "Upwork",
-        "description": "World's largest freelance platform. Vast range of projects including DevOps, technical writing, and cloud engineering",
-        "link": "https://upwork.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Behance",
+        description: "Adobe's creative job board",
+        link: "https://www.behance.net/joblist",
+        category: ["remote", "popular"],
+        tags: ["design", "creative", "adobe", "ui", "ux"]
     },
     {
-        "name": "Freelancer",
-        "description": "Global marketplace with CI/CD, cloud architecture, and automation projects. Competitive bidding environment",
-        "link": "https://freelancer.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Designer Jobs",
+        description: "Job board specifically for designers",
+        link: "https://designerjobs.co/jobs",
+        category: ["remote", "popular"],
+        tags: ["design", "ui", "ux"]
     },
     {
-        "name": "Guru",
-        "description": "Flexible platform for DevOps, SRE, and specialized technical projects. Bid on global opportunities",
-        "link": "https://guru.com",
-        "category": [
-            "remote"
-        ]
+        name: "UI & UX Designer Jobs",
+        description: "Hand-picked UI, UX & UXR Jobs",
+        link: "https://uiuxdesignerjobs.com",
+        category: ["remote", "popular"],
+        tags: ["ui", "ux", "research", "hand-picked"]
     },
     {
-        "name": "Fiverr",
-        "description": "Popular platform for short-term DevOps tasks like containerization, CI/CD setup, and cloud deployments",
-        "link": "https://fiverr.com",
-        "category": [
-            "remote"
-        ]
+        name: "UX Jobs Board",
+        description: "User experience design job board",
+        link: "https://www.uxjobsboard.com",
+        category: ["remote", "popular"],
+        tags: ["ux", "user-experience", "design"]
+    },
+
+    // Freelance Platforms
+    {
+        name: "Arc.dev",
+        description: "Curated marketplace for vetted remote developers. Requires vetting (communication + technical tests). Covers 60+ specialties",
+        link: "https://arc.dev",
+        category: ["remote", "popular", "devops"],
+        tags: ["vetted", "marketplace", "freelance"]
     },
     {
-        "name": "PeoplePerHour",
-        "description": "UK-first, globally open. Hand-reviewed freelancers. Connects professionals for technical tasks and DevOps automation",
-        "link": "https://peopleperhour.com",
-        "category": [
-            "remote"
-        ]
+        name: "Toptal",
+        description: "Elite network for top 3% of freelancers. Rigorous screening process. High-quality, vetted clients and developers",
+        link: "https://toptal.com",
+        category: ["remote", "popular", "devops"],
+        tags: ["elite", "freelance", "vetted", "top-tier"]
     },
     {
-        "name": "DevOps Freelancer",
-        "description": "Dedicated platform for DevOps, SRE, and DevSecOps experts to find niche-specific projects",
-        "link": "https://devopsfreelancer.com",
-        "category": [
-            "devops"
-        ]
+        name: "Upwork",
+        description: "World's largest freelance platform. Vast range of projects including DevOps, technical writing, and cloud engineering",
+        link: "https://upwork.com",
+        category: ["remote", "popular"],
+        tags: ["freelance", "contract", "platform"]
     },
     {
-        "name": "Hired",
-        "description": "Connects highly skilled professionals like DevOps engineers with global companies offering premium remote roles",
-        "link": "https://hired.com",
-        "category": [
-            "remote",
-            "devops"
-        ]
+        name: "Freelancer",
+        description: "Global marketplace with CI/CD, cloud architecture, and automation projects. Competitive bidding environment",
+        link: "https://freelancer.com",
+        category: ["remote", "popular"],
+        tags: ["freelance", "bidding", "global"]
     },
     {
-        "name": "CodementorX",
-        "description": "Platform for freelancers who can mentor or consult on DevOps practices, SRE, or DevSecOps strategies",
-        "link": "https://codementor.io",
-        "category": [
-            "devops",
-            "remote"
-        ]
+        name: "Guru",
+        description: "Flexible platform for DevOps, SRE, and specialized technical projects. Bid on global opportunities",
+        link: "https://guru.com",
+        category: ["remote"],
+        tags: ["freelance", "technical", "global"]
     },
     {
-        "name": "NoDesk",
-        "description": "Remote work toolkit and job board with 100,000+ talented candidates. Guides and best practices for remote work",
-        "link": "https://nodesk.co",
-        "category": [
-            "remote"
-        ]
+        name: "Fiverr",
+        description: "Popular platform for short-term DevOps tasks like containerization, CI/CD setup, and cloud deployments",
+        link: "https://fiverr.com",
+        category: ["remote"],
+        tags: ["freelance", "gigs", "short-term"]
     },
     {
-        "name": "Jobspresso",
-        "description": "Hand-picked remote jobs across multiple industries with 1,000+ listings. Post a resume feature for employers to find you",
-        "link": "https://jobspresso.co",
-        "category": [
-            "remote"
-        ]
+        name: "PeoplePerHour",
+        description: "UK-first, globally open. Hand-reviewed freelancers. Connects professionals for technical tasks and DevOps automation",
+        link: "https://peopleperhour.com",
+        category: ["remote"],
+        tags: ["freelance", "uk", "vetted"]
     },
     {
-        "name": "Remote OK",
-        "description": "Popular tech-focused job board with clean interface. Wide range of remote tech jobs from around the world",
-        "link": "https://remoteok.com",
-        "category": [
-            "remote"
-        ]
+        name: "Gun.io",
+        description: "Freelance developer marketplace",
+        link: "https://www.gun.io",
+        category: ["remote"],
+        tags: ["freelance", "developer", "marketplace"]
     },
     {
-        "name": "Outsourcely",
-        "description": "Remote job board dedicated to outsourcing. Companies hiring worldwide. Browse or create profile for employers to find you",
-        "link": "https://outsourcely.com",
-        "category": [
-            "remote"
-        ]
+        name: "Hubstaff Talent",
+        description: "Free freelance marketplace",
+        link: "https://talent.hubstaff.com",
+        category: ["remote"],
+        tags: ["freelance", "free", "marketplace"]
+    },
+
+    // Specialized Tech
+    {
+        name: "Ruby on Rails Jobs",
+        description: "Job board for Ruby on Rails developers",
+        link: "https://www.ruby-on-rails-jobs.com",
+        category: ["remote", "devops"],
+        tags: ["ruby", "rails", "backend"]
     },
     {
-        "name": "Virtual Vocations",
-        "description": "Remote job board with focus on legitimate work-from-home opportunities across various industries",
-        "link": "https://virtualvocations.com",
-        "category": [
-            "remote"
-        ]
+        name: "React Job Board",
+        description: "Jobs for React developers",
+        link: "https://www.reactjobboard.com",
+        category: ["remote", "popular"],
+        tags: ["react", "frontend", "javascript"]
     },
     {
-        "name": "Skip the Drive",
-        "description": "Remote job board aggregating work-from-home opportunities across multiple industries and job types",
-        "link": "https://skipthedrive.com",
-        "category": [
-            "remote"
-        ]
+        name: "Vue Jobs",
+        description: "Job board for Vue.js developers",
+        link: "https://vuejobs.com",
+        category: ["remote", "popular"],
+        tags: ["vue", "vuejs", "frontend", "javascript"]
     },
     {
-        "name": "Power to Fly",
-        "description": "Remote job board connecting women with flexible tech and startup jobs. Focuses on diversity and inclusion",
-        "link": "https://powertofly.com",
-        "category": [
-            "remote"
-        ]
+        name: "Angular Jobs",
+        description: "Job board for Angular developers",
+        link: "https://angularjobs.com",
+        category: ["remote", "popular"],
+        tags: ["angular", "frontend", "javascript"]
     },
     {
-        "name": "LinkedIn Jobs",
-        "description": "Professional networking job board with 91,000+ remote tech jobs worldwide. Advanced filtering by role, location, and company",
-        "link": "https://linkedin.com/jobs",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Python Job Board",
+        description: "Official Python.org job board",
+        link: "https://www.python.org/jobs",
+        category: ["remote", "popular"],
+        tags: ["python", "backend", "data"]
     },
     {
-        "name": "Indeed",
-        "description": "Large general job board with remote job filter. Good for finding technical writing, support, and various tech roles",
-        "link": "https://indeed.com",
-        "category": [
-            "remote",
-            "popular"
-        ]
+        name: "Django Jobs",
+        description: "Job board for Django developers",
+        link: "https://djangojobs.net/jobs",
+        category: ["remote", "devops"],
+        tags: ["django", "python", "backend"]
     },
     {
-        "name": "Stack Overflow Jobs",
-        "description": "Job board for software developers and engineers. Remote positions across different tech stacks and experience levels",
-        "link": "https://stackoverflow.com/jobs",
-        "category": [
-            "remote"
-        ]
+        name: "Golang Cafe",
+        description: "Job board for Go developers",
+        link: "https://golang.cafe",
+        category: ["remote", "devops"],
+        tags: ["golang", "go", "backend"]
     },
     {
-        "name": "GitHub Jobs",
-        "description": "Job board for software developers, engineers, and open source contributors. GitHub-integrated job postings",
-        "link": "https://github.careers",
-        "category": [
-            "remote",
-            "opensource"
-        ]
+        name: "Rust Jobs",
+        description: "Rust Programming Language Jobs",
+        link: "http://rust-jobs.com",
+        category: ["remote", "devops"],
+        tags: ["rust", "systems", "backend"]
     },
     {
-        "name": "HackerNews Who is Hiring",
-        "description": "Monthly 'Who is Hiring' thread on HN with direct job postings from companies and startups. Real-time opportunities",
-        "link": "https://news.ycombinator.com/jobs",
-        "category": [
-            "remote",
-            "startup"
-        ]
+        name: "iOS Dev Jobs",
+        description: "Job board for iOS developers",
+        link: "https://iosdevjobs.com",
+        category: ["remote", "popular"],
+        tags: ["ios", "mobile", "swift"]
     },
     {
-        "name": "HNHIRING",
-        "description": "Index and search engine for all HackerNews 'Who is Hiring?' posts since 2018. 57,000+ job ads searchable",
-        "link": "https://hnhiring.com",
-        "category": [
-            "remote",
-            "startup"
-        ]
+        name: "Android Dev Careers",
+        description: "Job board for Android developers",
+        link: "https://androiddev.careers",
+        category: ["remote", "popular"],
+        tags: ["android", "mobile", "kotlin"]
     },
     {
-        "name": "The Muse",
-        "description": "Job board with detailed company profiles. Remote filter available. Strong company culture and benefits information",
-        "link": "https://themuse.com",
-        "category": [
-            "remote"
-        ]
+        name: "React Native Jobs",
+        description: "The #1 job board for React Native developers",
+        link: "https://reactnative-jobs.com",
+        category: ["remote", "popular"],
+        tags: ["react-native", "mobile", "javascript"]
     },
     {
-        "name": "Dribbble",
-        "description": "#1 job board for remote graphic design jobs. Largest independent community for designers and creative professionals",
-        "link": "https://dribbble.com/remote-design-jobs",
-        "category": [
-            "remote"
-        ]
+        name: "LaraJobs",
+        description: "Job board for Laravel developers",
+        link: "https://larajobs.com",
+        category: ["remote", "devops"],
+        tags: ["laravel", "php", "backend"]
     },
     {
-        "name": "Remote Rocketship",
-        "description": "Search 1000+ remote jobs by role (DevRel, DevOps, etc). Focused on genuinely remote companies. Developer relations positions",
-        "link": "https://remoterocketship.com",
-        "category": [
-            "remote",
-            "devrel"
-        ]
+        name: "Elixir Jobs",
+        description: "Job board for Elixir developers",
+        link: "https://elixirjobs.net",
+        category: ["remote", "devops"],
+        tags: ["elixir", "functional", "backend"]
+    },
+
+    // Developer Platforms
+    {
+        name: "Strider",
+        description: "Vetted remote developer hiring platform. Focuses on full-time remote talent from Latin America with US time zone alignment",
+        link: "https://www.onstrider.com/jobs",
+        category: ["remote"],
+        tags: ["vetted", "latam", "full-time"]
     },
     {
-        "name": "CryptoJobs",
-        "description": "Specialized job board for developer relations roles at blockchain/crypto startups. DevRel, Dev Advocate positions",
-        "link": "https://cryptocurrencyjobs.co/developer-relations",
-        "category": [
-            "devrel",
-            "startup"
-        ]
+        name: "Turing",
+        description: "1 million+ developer marketplace using AI matching. Vets developers thoroughly. Covers full-time and project-based work",
+        link: "https://turing.com",
+        category: ["remote"],
+        tags: ["ai-matching", "vetted", "marketplace"]
     },
     {
-        "name": "Guru (Technical Writing)",
-        "description": "Platform for technical writing freelancers. Find work and manage projects for tech documentation roles",
-        "link": "https://guru.com/m/find/freelance-jobs/technical-writing",
-        "category": [
-            "techwriting"
-        ]
+        name: "Andela",
+        description: "Connects startups with skilled engineers from Africa and Latin America. 12-month contracts with experienced developers",
+        link: "https://andela.com",
+        category: ["remote"],
+        tags: ["africa", "latam", "vetted", "startup"]
     },
     {
-        "name": "ProBlogger Job Board",
-        "description": "Niche platform for technical writers with strong academic writing background. High-level technical content expertise",
-        "link": "https://problogger.com/jobs",
-        "category": [
-            "techwriting"
-        ]
+        name: "DistantJob",
+        description: "IT staffing partner recruiting senior remote developers. Handles contracts, payroll, and global compliance. Multi-step vetting",
+        link: "https://distantjob.com/apply",
+        category: ["remote"],
+        tags: ["senior", "staffing", "vetted"]
     },
     {
-        "name": "WriterAccess",
-        "description": "Tiered system for categorizing writers' expertise. Content planning tools for technical writing projects",
-        "link": "https://writeraccess.com",
-        "category": [
-            "techwriting"
-        ]
+        name: "ReactSquad",
+        description: "Marketplace of vetted React developers. Each developer goes through 3 interviews and 4 weeks paid test project. $75/hr rate",
+        link: "https://reactsquad.io",
+        category: ["remote"],
+        tags: ["react", "vetted", "frontend"]
     },
     {
-        "name": "WriterHire",
-        "description": "Platform for hiring skilled technical writers for documentation and complex technical information",
-        "link": "https://writerhire.com",
-        "category": [
-            "techwriting"
-        ]
+        name: "Geekhunter",
+        description: "Platform for hiring tech talent. Known for fast hiring process. Developers at various experience levels",
+        link: "https://geekhunter.io",
+        category: ["remote"],
+        tags: ["tech", "fast-hiring", "developer"]
+    },
+
+    // Data & AI
+    {
+        name: "AI Jobs",
+        description: "Find a job at a cutting-edge AI company",
+        link: "https://www.moaijobs.com",
+        category: ["remote", "devops"],
+        tags: ["ai", "machine-learning", "data", "startup"]
     },
     {
-        "name": "TechWhirl",
-        "description": "Community for technical communicators. Job board plus forums, resources, and professional development opportunities",
-        "link": "https://techwhirl.com",
-        "category": [
-            "techwriting"
-        ]
+        name: "AI/ML Jobs",
+        description: "Jobs at Top AI Companies and Startups, Updated Daily",
+        link: "https://aimljobs.fyi",
+        category: ["remote", "devops"],
+        tags: ["ai", "ml", "machine-learning", "startup"]
     },
     {
-        "name": "Open Collective",
-        "description": "Funding platform for open source projects. Fiscal sponsorship for 3,000+ projects. Transparent financial management",
-        "link": "https://opencollective.com/opensource",
-        "category": [
-            "opensource"
-        ]
+        name: "DataJobs",
+        description: "Job board for data professionals",
+        link: "https://datajobs.com",
+        category: ["remote", "devops"],
+        tags: ["data", "analytics", "data-science"]
     },
     {
-        "name": "GitHub Sponsors",
-        "description": "Directly support open source developers through GitHub. Fund contributors, maintainers, and open source projects",
-        "link": "https://github.com/sponsors",
-        "category": [
-            "opensource"
-        ]
+        name: "iCrunchData",
+        description: "Data science and analytics jobs",
+        link: "https://icrunchdata.com",
+        category: ["remote", "devops"],
+        tags: ["data-science", "analytics", "data"]
     },
     {
-        "name": "Strider",
-        "description": "Vetted remote developer hiring platform. Focuses on full-time remote talent from Latin America with US time zone alignment",
-        "link": "https://onstrider.com",
-        "category": [
-            "remote",
-            "devops"
-        ]
+        name: "DataScienceJobs",
+        description: "Discover the latest and greatest data science jobs",
+        link: "https://datasciencejobs.com",
+        category: ["remote", "devops"],
+        tags: ["data-science", "analytics", "ml"]
     },
     {
-        "name": "Turing",
-        "description": "1 million+ developer marketplace using AI matching. Vets developers thoroughly. Covers full-time and project-based work",
-        "link": "https://turing.com",
-        "category": [
-            "remote"
-        ]
+        name: "CryptoJobs List",
+        description: "Crypto and blockchain job board",
+        link: "https://cryptojobslist.com",
+        category: ["remote", "devops"],
+        tags: ["blockchain", "crypto", "web3", "startup"]
     },
     {
-        "name": "Andela",
-        "description": "Connects startups with skilled engineers from Africa and Latin America. 12-month contracts with experienced developers",
-        "link": "https://andela.com",
-        "category": [
-            "remote"
-        ]
+        name: "Web3 Jobs",
+        description: "Web3 career opportunities",
+        link: "https://web3.career",
+        category: ["remote", "devops"],
+        tags: ["web3", "blockchain", "crypto", "startup"]
     },
     {
-        "name": "DistantJob",
-        "description": "IT staffing partner recruiting senior remote developers. Handles contracts, payroll, and global compliance. Multi-step vetting",
-        "link": "https://distantjob.com",
-        "category": [
-            "remote",
-            "devops"
-        ]
+        name: "Crypto.jobs",
+        description: "Cryptocurrency job board",
+        link: "https://crypto.jobs",
+        category: ["remote", "devops"],
+        tags: ["crypto", "blockchain", "startup"]
+    },
+
+    // InfoSec
+    {
+        name: "NinjaJobs",
+        description: "Information security job board",
+        link: "https://ninjajobs.org",
+        category: ["remote", "devops"],
+        tags: ["security", "infosec", "cybersecurity"]
     },
     {
-        "name": "YouTeam",
-        "description": "Marketplace of vetted developers with strong UI. Developers set rates ($60-100+/hr including 10% commission)",
-        "link": "https://youteam.com",
-        "category": [
-            "remote"
-        ]
+        name: "InfoSec Jobs",
+        description: "Information security careers",
+        link: "https://infosec-jobs.com",
+        category: ["remote", "devops"],
+        tags: ["infosec", "security", "cybersecurity"]
     },
     {
-        "name": "ReactSquad",
-        "description": "Marketplace of vetted React developers. Each developer goes through 3 interviews and 4 weeks paid test project. $75/hr rate",
-        "link": "https://reactsquad.io",
-        "category": [
-            "remote"
-        ]
+        name: "CyberSecurity Jobs",
+        description: "Cybersecurity job opportunities",
+        link: "https://www.cybersecurityjobs.net",
+        category: ["remote", "devops"],
+        tags: ["cybersecurity", "security", "infosec"]
+    },
+
+    // Specialized
+    {
+        name: "findwork.dev",
+        description: "Tech job aggregator for developers",
+        link: "https://findwork.dev",
+        category: ["remote"],
+        tags: ["aggregator", "developer", "tech"]
     },
     {
-        "name": "Geekhunter",
-        "description": "Platform for hiring tech talent. Known for fast hiring process. Developers at various experience levels",
-        "link": "https://geekhunter.io",
-        "category": [
-            "remote"
-        ]
-    }
+        name: "Relocate.me",
+        description: "Jobs with relocation assistance",
+        link: "https://relocate.me",
+        category: ["remote"],
+        tags: ["relocation", "visa", "international"]
+    },
+    {
+        name: "TechMeAbroad",
+        description: "Tech jobs with relocation abroad",
+        link: "https://techmeabroad.com",
+        category: ["remote"],
+        tags: ["relocation", "international", "tech"]
+    },
+    {
+        name: "ClimateTechList",
+        description: "Climate tech / green energy jobs for software engineers",
+        link: "https://www.climatetechlist.com",
+        category: ["remote"],
+        tags: ["climate", "green-energy", "sustainability"]
+    },
+    {
+        name: "Tech Jobs for Good",
+        description: "Tech jobs at mission-driven companies",
+        link: "https://techjobsforgood.com",
+        category: ["remote"],
+        tags: ["social-impact", "mission-driven", "good"]
+    },
+    {
+        name: "Diversify Tech",
+        description: "Job board for underrepresented people in tech",
+        link: "https://www.diversifytech.co/job-board",
+        category: ["remote"],
+        tags: ["diversity", "inclusive", "underrepresented"]
+    },
+    {
+        name: "4 Day Week",
+        description: "Jobs with 4-day work weeks",
+        link: "https://4dayweek.io",
+        category: ["remote"],
+        tags: ["4-day-week", "work-life-balance", "flexible"]
+    },
+    {
+        name: "Workatastartup",
+        description: "Y Combinator's startup job board",
+        link: "https://www.workatastartup.com/job_list",
+        category: ["remote", "popular"],
+        tags: ["yc", "startup", "early-stage"]
+    },
 ];
 
 export function getBoardsByCategory(category: Category) {
