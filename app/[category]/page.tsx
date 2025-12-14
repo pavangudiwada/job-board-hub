@@ -5,11 +5,17 @@ import Link from "next/link"
 import WelcomeBanner from "@/app/components/WelcomeBanner"
 import MobileMenu from "@/app/components/MobileMenu"
 import { Analytics } from "@vercel/analytics/next"
+import { testDatabaseConnection } from "@/app/libs/prisma"
 
 export default async function JobBoards({ params }: { params: Promise<{ category: string }> }) {
     const { category } = await params as { category: Category }
 
     const currentCategory = hubCategories.find(cat => cat.id === category)
+
+    // Test database connection when page loads
+    const dbTest = await testDatabaseConnection()
+    console.log('Database test result:', dbTest)
+
 
     return (
         <div className="flex flex-col h-screen">
