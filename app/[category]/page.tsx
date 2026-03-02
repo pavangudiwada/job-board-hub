@@ -1,15 +1,65 @@
 import { hubCategories } from "@/data/categories"
 import { getBoardsByCategory, Category } from "@/data/boards"
-import BoardCard from "./BoardCard"
+import { seoFooterCollections } from "@/data/seoCollections"
+import BoardExplorer from "./BoardExplorer"
+import FloatingActionBar from "./FloatingActionBar"
 import Link from "next/link"
 import WelcomeBanner from "@/app/components/WelcomeBanner"
 import MobileMenu from "@/app/components/MobileMenu"
 import { Analytics } from "@vercel/analytics/next"
+import { Metadata } from "next"
+import { notFound } from "next/navigation"
 
-export default async function JobBoards({ params }: { params: Promise<{ category: string }> }) {
+type RouteParams = { category: string }
+
+export async function generateStaticParams() {
+    return hubCategories.map((category) => ({ category: category.id }))
+}
+
+export async function generateMetadata(
+    { params }: { params: Promise<RouteParams> }
+): Promise<Metadata> {
+    const { category } = await params
+    const currentCategory = hubCategories.find((cat) => cat.id === category)
+
+    if (!currentCategory) {
+        return {
+            title: "Category Not Found | Job Resources",
+            robots: { index: false, follow: false },
+        }
+    }
+
+    const title = `${currentCategory.name} Job Boards | Job Resources`
+    const description = `Browse curated ${currentCategory.name.toLowerCase()} job boards to find your next opportunity.`
+
+    return {
+        title,
+        description,
+        alternates: {
+            canonical: `/${currentCategory.id}`,
+        },
+        openGraph: {
+            title,
+            description,
+            url: `/${currentCategory.id}`,
+            type: "website",
+        },
+        twitter: {
+            title,
+            description,
+            card: "summary_large_image",
+        },
+    }
+}
+
+export default async function JobBoards({ params }: { params: Promise<RouteParams> }) {
     const { category } = await params as { category: Category }
 
     const currentCategory = hubCategories.find(cat => cat.id === category)
+    const boards = getBoardsByCategory(category)
+    if (!currentCategory) {
+        notFound()
+    }
 
     return (
         <div className="flex flex-col h-screen">
@@ -56,27 +106,31 @@ export default async function JobBoards({ params }: { params: Promise<{ category
                         ))}
                     </nav>
                 </aside>
-                <main className="flex-1 p-6 overflow-y-auto">
-                    <h2 className="text-2xl font-bold mb-4">{currentCategory?.name || category} Job Boards</h2>
+                <main className="flex-1 p-6 pb-40 md:pb-28 overflow-y-auto">
+                    <h2 className="text-2xl font-bold mb-4">{currentCategory.name} Job Boards</h2>
+                    <BoardExplorer boards={boards} />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {getBoardsByCategory(category).map(board => (
-                            <BoardCard key={board.name} board={board} />
-                        ))}
-                    </div>
-
-                    {/* Floating "Missing a job board?" pill */}
-                    <Link
-                        href="https://github.com/pavangudiwada/job-board-hub/issues/new"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:flex fixed bottom-6 left-1/2 -translate-x-1/2 items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full shadow-lg hover:bg-slate-800 transition-all hover:shadow-xl text-sm font-medium z-40"
-                    >
-                        Missing a job board? <span className="font-semibold">Add it</span>
-                    </Link>
+                    <section className="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8">
+                        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Explore Best Job Collections</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                            Browse curated pages for high-intent searches like open source, security, startup, and AI/ML roles.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {seoFooterCollections.map((collection) => (
+                                <Link
+                                    key={collection.slug}
+                                    href={`/${collection.targetCategory}`}
+                                    className="px-3 py-2 bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition"
+                                >
+                                    {collection.title}
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
                 </main>
                 <Analytics />
             </div>
+            <FloatingActionBar />
         </div >
 
 

@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jobresources.fyi"),
   title: "Job Resources",
   description: "One stop for all your job hunting needs - find specialized job boards across tech, design, remote work and more",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Job Resources",
     description: "One stop for all your job hunting needs - find specialized job boards across tech, design, remote work and more",
