@@ -71,7 +71,7 @@ export default async function JobBoards({ params }: { params: Promise<RouteParam
                         <p className="text-sm">Everything you need to find your next job.</p>
                     </div>
                     <Link
-                        href="https://github.com/pavangudiwada/jobresources"
+                        href="https://github.com/pavangudiwada/job-resources"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white text-slate-900 rounded-md hover:bg-gray-100 transition text-sm font-medium"
@@ -119,7 +119,7 @@ export default async function JobBoards({ params }: { params: Promise<RouteParam
                             {seoFooterCollections.map((collection) => (
                                 <Link
                                     key={collection.slug}
-                                    href={`/${collection.targetCategory}`}
+                                    href={`/best/${collection.slug}`}
                                     className="px-3 py-2 bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition"
                                 >
                                     {collection.title}

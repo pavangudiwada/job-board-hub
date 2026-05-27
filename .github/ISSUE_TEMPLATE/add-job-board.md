@@ -30,6 +30,8 @@ assignees: ''
 - devrel
 - techwriting
 - startup
+- aiml
+- crypto
 -->
 
 **Tags:**
@@ -39,7 +41,7 @@ assignees: ''
 
 ## Contributor Guidelines
 
-Before submitting this issue, please review our [Contributing Guidelines](../CONTRIBUTING.md) to ensure your suggestion meets our criteria.
+Before submitting this issue, please review our [Contributing Guidelines](../../CONTRIBUTING.md) to ensure your suggestion meets our criteria.
 
 **Are you willing to submit a Pull Request to add this job board yourself?**
 <!-- Please select one by placing an 'x' in the brackets -->
