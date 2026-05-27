@@ -44,6 +44,8 @@ The most common contribution is adding new job boards to our collection. Here's 
 - `devrel` - Developer Relations positions
 - `techwriting` - Technical writing opportunities
 - `startup` - Jobs at startups
+- `aiml` - Artificial Intelligence and Machine Learning jobs
+- `crypto` - Blockchain, crypto, and Web3 opportunities
 
 #### Example Addition
 
@@ -90,8 +92,8 @@ We welcome feature suggestions! Please create an issue with:
 
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/job-board-hub.git
-   cd job-board-hub/jobresources
+   git clone https://github.com/YOUR_USERNAME/job-resources.git
+   cd job-resources
    ```
 
 3. **Install dependencies**:
@@ -131,17 +133,20 @@ npm run lint
 ## Project Structure
 
 ```
-jobresources/
+job-resources/
 ├── app/                    # Next.js app directory
 │   ├── [category]/        # Dynamic category pages
 │   │   ├── page.tsx       # Category page component
 │   │   └── BoardCard.tsx  # Job board card component
+│   ├── best/              # Curated SEO collection pages
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
 │   └── page.tsx           # Home page
 ├── data/                   # Data files
 │   ├── boards.ts          # Job boards data (ADD NEW BOARDS HERE)
-│   └── categories.ts      # Category definitions
+│   ├── categories.ts      # Category definitions
+│   └── seoCollections.ts  # Curated best-of collection definitions
+├── docs/                   # Product strategy, audits, and roadmap notes
 ├── public/                 # Static assets
 └── package.json           # Dependencies and scripts
 ```

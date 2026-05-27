@@ -1,15 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function WelcomeBanner() {
-    const [isVisible, setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState<boolean | null>(null)
 
     useEffect(() => {
         const bannerDismissed = sessionStorage.getItem('welcomeBannerDismissed')
-        if (!bannerDismissed) {
-            setIsVisible(true)
-        }
+        const frame = requestAnimationFrame(() => {
+            setIsVisible(!bannerDismissed)
+        })
+
+        return () => cancelAnimationFrame(frame)
     }, [])
 
     const handleClose = () => {
@@ -25,7 +27,7 @@ export default function WelcomeBanner() {
                 <div className="flex items-center gap-3">
                     <span className="text-2xl">👋</span>
                     <p className="text-sm md:text-base">
-                        <span className="font-semibold">Welcome to Job Resources!</span> We're expanding soon with <span className="font-medium">communities, learning resources, and more</span> to supercharge your job hunt. Stay tuned!
+                        <span className="font-semibold">Welcome to Job Resources!</span> We&apos;re expanding soon with <span className="font-medium">communities, learning resources, and more</span> to supercharge your job hunt. Stay tuned!
                     </p>
                 </div>
                 <button

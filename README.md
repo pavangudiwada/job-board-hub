@@ -1,20 +1,22 @@
 # Job Resources
 
-A curated collection of job boards across tech, design, AI/ML, DevOps, and more! All in one place.
+A curated collection of 100+ job boards across tech, design, AI/ML, DevOps, DevRel, technical writing, crypto/Web3, startups, and remote work.
 
 ## Why I Built This
 
-Job hunting is frustrating. You bookmark dozens of job boards, struggle to remember which sites had the best opportunities, and waste time searching for that one resource you can't quite recall. Sharing these resources with friends becomes a repetitive task, and managing them all is a headache.
+Job hunting is frustrating. You bookmark dozens of job boards, struggle to remember which sites had the best opportunities, and waste time searching for the one resource you cannot quite recall. Sharing these resources with friends becomes repetitive, and managing them all is a headache.
 
-Job Resources solves this by consolidating 100+ specialized job boards into a single, organized platform. No more hunting through bookmarks or losing track of valuable resources.
+Job Resources solves this by consolidating specialized job boards into a single organized platform. No more hunting through bookmarks or losing track of useful resources.
 
 ## Features
 
-- **100+ Job Boards** - Curated collection across multiple categories
-- **Organized Categories** - Popular, Remote, Development, AI/ML, Crypto/Web3, Design, DevOps, DevRel, Tech Writing, Open Source, and Startup
-- **One-Click Access** - Copy links or explore boards directly
-- **Responsive Design** - Works seamlessly on desktop and mobile
-- **Dark Mode** - Easy on the eyes during long job search sessions
+- **100+ job boards** - Curated collection across multiple categories.
+- **Organized categories** - Popular, Remote, Development, AI/ML, Crypto/Web3, Design, DevOps, DevRel, Tech Writing, Open Source, and Startup.
+- **Search** - Filter boards by name, description, or tag.
+- **Best collections** - SEO-friendly pages for high-intent searches like open source jobs, security jobs, startup jobs, and AI/ML jobs.
+- **One-click access** - Copy links or open boards directly.
+- **Responsive design** - Works on desktop and mobile.
+- **Dark mode** - Easy on the eyes during long job search sessions.
 
 ## Getting Started
 
@@ -39,9 +41,10 @@ npm start
 
 ## Contributing
 
-We welcome contributions! Whether it's adding new job boards, improving the UI, or fixing bugs - your help makes this better for everyone.
+Contributions are welcome: add new job boards, improve the UI, refresh stale links, or fix bugs.
 
 Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+
 - Adding new job boards
 - Development setup
 - Code style guidelines
@@ -49,24 +52,37 @@ Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
 
 ## Tech Stack
 
-- **Next.js 15** - React framework with App Router
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI framework
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first styling
+- **Vercel Analytics** - Lightweight analytics
 - **Vercel** - Deployment platform
+
+## Product Direction
+
+See [docs/product-strategy.md](docs/product-strategy.md) for the current positioning, update plan, and growth roadmap.
+
+Near-term focus:
+
+1. Keep the broad directory useful and current.
+2. Improve niche collections for developer-facing and technical roles.
+3. Add lightweight contribution workflows for missing or stale boards.
+4. Avoid overbuilding automation before the board data quality is reliable.
+
+## Roadmap
+
+- Better board data quality checks.
+- Link freshness and duplicate detection.
+- Community, forum, and learning resources.
+- Interview preparation resources.
+- Skill development platforms.
+- More niche collections for DevRel, DevOps/SRE, AI infra, and technical PMM roles.
+
+## Support
+
+If you find this helpful, give it a ⭐️ on [GitHub](https://github.com/pavangudiwada/job-resources)!
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Roadmap
-
-Coming soon:
-- Advanced filtering and search
-- Interview preparation resources
-- Community and fourm resources
-- Learning resources and skill development platforms
-- and more!!
-
-## Support
-
-If you find this helpful, give it a ⭐️ on [GitHub](https://github.com/pavangudiwada/jobresources)!
